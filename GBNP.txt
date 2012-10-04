@@ -183,14 +183,24 @@ P: 0                             NATIONAL-ACCESS
 P: 56XXXXXXXX                    VOIP-NUMBER
 T: N
 
-# 0+9[018]XXXXXXXX
+# 0+90[0-7]XXXXXXX
 P: 0                             NATIONAL-ACCESS
-P: 9[018]XXXXXXXX                PREMIUM-RATE-NUMBER
+P: 90[0-7]XXXXXXX                PREMIUM-RATE-NUMBER
 T: N
 
-# 0+9[2-9]XXXXXXXX
+# 0+90[89]XXXXXXX
 P: 0                             NATIONAL-ACCESS
-P: 9[2-9]XXXXXXXX                BROADBAND-SERVICE
+P: 90[89]XXXXXXX                 PREMIUM-RATE-ADULT-SERVICES
+T: N
+
+# 0+91XXXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 91XXXXXXXX                    PREMIUM-RATE-NUMBER
+T: N
+
+# 0+98XXXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 98XXXXXXXX                    PREMIUM-RATE-ADULT-SERVICES
 T: N
 
 
