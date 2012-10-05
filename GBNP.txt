@@ -3,6 +3,9 @@
 # W:  Network Specific Facilities -- OP or OPXXXX(alternate carriers)
 # U: Urgent pattern? (Call extended immediately on match)
 
+
+# Local Calls
+
 # [2-9]XXXXXXX
 P: [2-9]XXXXXXX                  LOCAL-8-DIGIT
 
@@ -19,27 +22,7 @@ P: [2-9]XXXX                     LOCAL-5-DIGIT
 P: [23]XXX                       LOCAL-4-DIGIT
 
 
-# Long Distance Calls
-
-# 0+500XXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 500XXXXXX                     FREEPHONE-NUMBER
-T: N
-
-# 0+82XXXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 82XXXXXXXX                    BROADBAND-SERVICE
-T: N
-
-# 0+80[08]XXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 80[08]XXXXXXX                 FREEPHONE-NUMBER
-T: N
-
-# 0+800XXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 800XXXXXX                     FREEPHONE-NUMBER
-T: N
+# Long Distance Calls - 10 digits
 
 # 0+11[3-8]+[2-9]XXXXXX
 P: 0                             NATIONAL-ACCESS
@@ -81,11 +64,6 @@ P: 0                             NATIONAL-ACCESS
 P: 29                            AREA-CODE
 P: 2XXXXXXX                      SUBSCRIBER
 
-# 0+3[0347]X+XXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 3[0347]X                      AREA-CODE
-P: XXXXXXX                       SUBSCRIBER
-
 # 0+13873+[2-9]XXXX
 P: 0                             NATIONAL-ACCESS
 P: 13873                         5DIGIT-SPECIALAREA-CODE
@@ -110,13 +88,6 @@ P: 1697[347]                     5DIGIT-SPECIALAREA-CODE
 P: [2-9]XXXX                     SUBSCRIBER
 T: N
 
-# 0+16977+[23]XXX
-P: 0                             NATIONAL-ACCESS
-P: 16977                         5DIGIT-SPECIALAREA-CODE
-P: [23]XXX                       SUBSCRIBER
-T: N
-U: Y
-
 # 0+1768[347]+[2-9]XXXX
 P: 0                             NATIONAL-ACCESS
 P: 1768[347]                     5DIGIT-SPECIALAREA-CODE
@@ -128,98 +99,6 @@ P: 0                             NATIONAL-ACCESS
 P: 19467                         5DIGIT-SPECIALAREA-CODE
 P: [2-9]XXXX                     SUBSCRIBER
 T: N
-
-
-# Non Geographic Calls
-
-# 0+87[1-3]+XXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 87[1-3]                       NATIONALRATE-ACCESS
-P: XXXXXXX                       NATIONALRATE-SUBSCRIBER
-T: N
-
-# 0+84[2-4]+XXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 84[2-4]                       LOCALRATE-ACCESS
-P: XXXXXXX                       LOCALRATE-SUBSCRIBER
-T: N
-
-# 0+845+XXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 845                           LOCALRATE-ACCESS
-P: XXXXXXX                       LOCALRATE-SUBSCRIBER
-T: N
-
-# 0+870+XXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 870                           LOCALRATE-ACCESS
-P: XXXXXXX                       LOCALRATE-SUBSCRIBER
-T: N
-
-# 0+76+XXXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 76                            PAGING-ACCESS
-P: XXXXXXXX                      PAGING-SUBSCRIBER
-T: N
-
-# 0+70+XXXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 70                            PERSONAL-ACCESS
-P: XXXXXXXX                      PERSONAL-SUBSCRIBER
-T: N
-
-# 0+3[0347]XXXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 3[0347]XXXXXXXX               03-NUMBER
-T: N
-
-# 0+55XXXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 55XXXXXXXX                    CORPORATE-NUMBER
-T: N
-
-# 0+56XXXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 56XXXXXXXX                    VOIP-NUMBER
-T: N
-
-# 0+90[0-7]XXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 90[0-7]XXXXXXX                PREMIUM-RATE-NUMBER
-T: N
-
-# 0+90[89]XXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 90[89]XXXXXXX                 PREMIUM-RATE-ADULT-SERVICES
-T: N
-
-# 0+91XXXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 91XXXXXXXX                    PREMIUM-RATE-NUMBER
-T: N
-
-# 0+98XXXXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 98XXXXXXXX                    PREMIUM-RATE-ADULT-SERVICES
-T: N
-
-
-# Mobile calls
-
-# 0+7[1-5789]XX+XXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 7[1-5789]XX                   MOBILE-ACCESS
-P: XXXXXX                        MOBILE-SUBSCRIBER
-T: N
-
-# 0+7624+XXXXXX
-P: 0                             NATIONAL-ACCESS
-P: 7624                          MOBILE-ACCESS
-P: XXXXXX                        MOBILE-SUBSCRIBER
-T: N
-
-
-# 5 Digit AC + 5 digit subs
 
 # 0+13873+[2-9]XXXX
 P: 0                             NATIONAL-ACCESS
@@ -258,7 +137,14 @@ P: [2-9]XXXX                     SUBSCRIBER
 T: N
 
 
-# 5 Digit AC + 4 digit Subs
+# Long Distance Calls - 9 digits
+
+# 0+16977+[23]XXX
+P: 0                             NATIONAL-ACCESS
+P: 16977                         5DIGIT-SPECIALAREA-CODE
+P: [23]XXX                       SUBSCRIBER
+T: N
+U: Y
 
 # 0+16977+[23]XXX
 P: 0                             NATIONAL-ACCESS
@@ -266,9 +152,6 @@ P: 16977                         AREA-CODE
 P: [23]XXX                       SUBSCRIBER
 T: N
 U: Y
-
-
-# 4 Digit AC + 5 digit Subs
 
 # 0+1204+6[1-4]XXX
 P: 0                             NATIONAL-ACCESS
@@ -698,7 +581,107 @@ T: N
 U: Y
 
 
-# Short Numbers
+# Non-geographic Numbers Charged at Geographic Rates
+
+# 0+3[0347]X+XXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 3[0347]X                      AREA-CODE
+P: XXXXXXX                       SUBSCRIBER
+
+# 0+3[0347]XXXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 3[0347]XXXXXXXX               03-NUMBER
+T: N
+
+
+# VoIP, Corporate, Personal and Pager Numbers
+
+# 0+55XXXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 55XXXXXXXX                    CORPORATE-NUMBER
+T: N
+
+# 0+56XXXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 56XXXXXXXX                    VOIP-NUMBER
+T: N
+
+# 0+70+XXXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 70                            PERSONAL-ACCESS
+P: XXXXXXXX                      PERSONAL-SUBSCRIBER
+T: N
+
+# 0+76+XXXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 76                            PAGING-ACCESS
+P: XXXXXXXX                      PAGING-SUBSCRIBER
+T: N
+
+
+# Mobile Numbers
+
+# 0+7[1-5789]XX+XXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 7[1-5789]XX                   MOBILE-ACCESS
+P: XXXXXX                        MOBILE-SUBSCRIBER
+T: N
+
+# 0+7624+XXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 7624                          MOBILE-ACCESS
+P: XXXXXX                        MOBILE-SUBSCRIBER
+T: N
+
+
+# Non-geographic Numbers - 10 digits
+
+# 0+80[08]XXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 80[08]XXXXXXX                 FREEPHONE-NUMBER
+T: N
+
+# 0+84[2-4]+XXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 84[2-4]                       LOCALRATE-ACCESS
+P: XXXXXXX                       LOCALRATE-SUBSCRIBER
+T: N
+
+# 0+845+XXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 845                           LOCALRATE-ACCESS
+P: XXXXXXX                       LOCALRATE-SUBSCRIBER
+T: N
+
+# 0+870+XXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 870                           LOCALRATE-ACCESS
+P: XXXXXXX                       LOCALRATE-SUBSCRIBER
+T: N
+
+# 0+87[1-3]+XXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 87[1-3]                       NATIONALRATE-ACCESS
+P: XXXXXXX                       NATIONALRATE-SUBSCRIBER
+T: N
+
+# 0+82XXXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 82XXXXXXXX                    BROADBAND-SERVICE
+T: N
+
+
+# Non-geographic Numbers - 9 digits
+
+# 0+500XXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 500XXXXXX                     FREEPHONE-NUMBER
+T: N
+
+# 0+800XXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 800XXXXXX                     FREEPHONE-NUMBER
+T: N
 
 # 0+800XXXXXX+#
 P: 0                             NATIONAL-ACCESS
@@ -706,6 +689,9 @@ P: 800XXXXXX                     FREEPHONE-NUMBER
 P: #                             END-OF-DIALING
 T: N
 U: Y
+
+
+# Non-geographic Numbers - 7 digits
 
 # 0+8001111
 P: 0                             NATIONAL-ACCESS
@@ -716,6 +702,29 @@ T: N
 P: 0                             NATIONAL-ACCESS
 P: 845                           LOCALRATE-ACCESS
 P: 464X                          LOCALRATE-SUBSCRIBER
+T: N
+
+
+# Premium Rate Numbers
+
+# 0+90[0-7]XXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 90[0-7]XXXXXXX                PREMIUM-RATE-NUMBER
+T: N
+
+# 0+90[89]XXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 90[89]XXXXXXX                 PREMIUM-RATE-ADULT-SERVICES
+T: N
+
+# 0+91XXXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 91XXXXXXXX                    PREMIUM-RATE-NUMBER
+T: N
+
+# 0+98XXXXXXXX
+P: 0                             NATIONAL-ACCESS
+P: 98XXXXXXXX                    PREMIUM-RATE-ADULT-SERVICES
 T: N
 
 
